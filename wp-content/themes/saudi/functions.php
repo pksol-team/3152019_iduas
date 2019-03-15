@@ -86,6 +86,15 @@ register_sidebar( array(
 'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 'after_widget' => '</div>',
 ) );
+
+register_sidebar( array (
+'name' => __( 'Header Right', 'blankslate' ),
+'id' => 'header_right',
+'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+'after_widget' => "</div>",
+) );
+
+
 }
 add_action( 'wp_head', 'blankslate_pingback_header' );
 function blankslate_pingback_header() {

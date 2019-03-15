@@ -25,7 +25,25 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 				</div>
 				<div class="col-md-4">
-					
+					<span class="header-search fright">
+					    <a title="Search" class="search-link"><i class="fa fa-search"></i></a>
+					    <div class="search-area">
+						    <span class="tip home-icon"></span>
+						    <div class="searcharea-inner">
+						        <div class="ms-mpSearchBox">
+						            <div class="search">
+						               <form role="search" method="get" class="search-form" action="http://saudi.test/">
+						                  <label>
+						                  <input type="search" class="search-field searchtxt fleft" placeholder="Search..." value="" name="s">
+						                  <button type="submit" class="searchbtn fright"><i class="fa fa-search"></i></button>
+						                  </label>
+						               </form>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</span>
+					<?php dynamic_sidebar('header_right'); ?>
 				</div>
 			</div>
 		</div>

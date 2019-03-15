@@ -23,6 +23,17 @@
 <?php wp_footer(); ?>
 <script>
 // jQuery(".pt-cv-ifield .pt-cv-meta-fields").insertAfter("h4.pt-cv-title");
+jQuery(document).ready(function($) {
+	$(".search-link").click(function(){	  
+	  event.stopPropagation(), "none" == $(".search-area").css("display") ? ($(".search-area").slideDown(), $(".search-area .search-col-bg").slideDown(), $(".search-area #DeltaPlaceHolderSearchArea").slideDown(), $(".search-link").addClass("search-link-opened")) : ($(".search-area .search-col-bg").slideUp(), $(".search-area #DeltaPlaceHolderSearchArea").slideUp(), $(".search-area").slideUp(), $(".search-link").removeClass("search-link-opened"))
+	    $(".accountBox").slideUp(), $(".useraccount-link").removeClass("useraccount-link-opened")
+	});
+
+	$(".useraccount-link").click(function(){
+	  event.stopPropagation(), "none" == $(".accountBox").css("display") ? ($(".accountBox").slideDown(), $(".useraccount-link").addClass("useraccount-link-opened")) : ($(".accountBox").slideUp(), $(".useraccount-link").removeClass("useraccount-link-opened"))
+	    $(".search-area").slideUp(), $(".search-link").removeClass("search-link-opened");
+	});
+});
 </script>
 </body>
 </html>
